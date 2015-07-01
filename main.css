@@ -1,0 +1,96 @@
+body {
+	font-family: Verdana;
+	color: white;
+	background-color: LightSeaGreen;
+	}
+
+#container {
+	background-color: yellow;
+	margin-left: auto;
+	margin-right: auto;
+}
+#heading {
+	font-size: 100pt;
+	font-family: Impact;
+	font-style: normal;
+	text-align: center;
+	margin: 5px;
+	text-shadow: -4px -4px grey;
+	border: 2px dotted red;
+	border-radius: 15px;
+	letter-spacing: 10px;
+	background-color: black;
+	width: 67%
+}
+
+nav ul {
+	list-style: none;
+	padding: 5px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: white
+}
+
+nav ul li:hover {
+	background: red;
+	font-weight: bold;
+}
+
+.site-menu {
+	width: 15%;
+	border: 2px dotted red;
+	border-radius: 15px;
+	float: left;
+	background-color: black;
+	text-align: center;
+}
+
+.content {
+	float: left;
+	width: 50%;
+	margin-left: 5px;
+	background-color: black;
+	border: 2px dotted red;
+	border-radius: 15px;
+	padding: 10px;
+	text-align: justify;
+}
+div h2 {
+	font-family: Courier;
+	font-style: italic;
+	text-shadow: 2px 2px red;
+}
+
+nav h2 {
+	text-align: center;
+	font-family: Impact;
+	font-style: normal;
+	text-decoration: none;
+	letter-spacing: 3px;
+	font-weight: normal;
+}
+ol {
+	padding: 0;
+	list-style: none;
+}
+
+ol li:last-child {
+	color: red;
+	background: white;
+}
+
+img {
+	max-width: 300px;
+	max-height: 200px; 
+}
+
+td {
+	text-align: center;
+}
+
+table tr td {
+	border: 1px dashed red;
+}
+
