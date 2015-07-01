@@ -16,10 +16,13 @@ content.className = "site-content";
 //LEVEL 2
 //header children
 
+
 var h1 = TK.create("h1");
 TK.append(header, h1);
-h1.id = "heading";
-h1.innerHTML = "KLASIIK";
+TK.attr(h1, {
+	id: "heading",
+	innerHTML: "KLASIIK"
+});
 
 //nav children
 
@@ -60,8 +63,13 @@ for (var i = 0; i < menuStrings.length; i++)
 //LEVEL 4 listItem children
 	var listLink = TK.create("a");
   TK.append(listItem, listLink);
-	listLink.setAttribute("href", menuAttributes[i]);
-	listLink.innerHTML = menuStrings[i];
+	//listLink.setAttribute("href", menuAttributes[i]);
+	//listLink.innerHTML = menuStrings[i];
+
+	TK.attr(listLink, {
+		href: menuAttributes[i],
+		innerHTML: menuStrings[i]
+	})
 }
 
 //about children
@@ -70,8 +78,9 @@ TK.append(about, aboutH2);
 
 var aboutParagraph = TK.create("p");
 TK.append(about, aboutParagraph);
-aboutParagraph.innerHTML = "Klasiik is the best rapper alive. He fucks bitches and kills rappers. I should write something more so the text is longer and it looks better, and this is what I am doing right now. Writing some shit which has no meaning whatsoever. You can say this paragraph is worthless and you would not be mistaken. It does not mean anything at all. It is just some jibberish. Fucking around with the letters, you know. But when it comes to Klasiik, there's not much more to say - HE DA KING."
-
+//aboutParagraph.innerHTML = "Klasiik is the best rapper alive. He fucks bitches and kills rappers. I should write something more so the text is longer and it looks better, and this is what I am doing right now. Writing some shit which has no meaning whatsoever. You can say this paragraph is worthless and you would not be mistaken. It does not mean anything at all. It is just some jibberish. Fucking around with the letters, you know. But when it comes to Klasiik, there's not much more to say - HE DA KING."
+TK.attr(aboutParagraph, {innerHTML: "Klasiik is the best rapper alive. He fucks bitches and kills rappers. I should write something more so the text is longer and it looks better, and this is what I am doing right now. Writing some shit which has no meaning whatsoever. You can say this paragraph is worthless and you would not be mistaken. It does not mean anything at all. It is just some jibberish. Fucking around with the letters, you know. But when it comes to Klasiik, there's not much more to say - HE DA KING."
+})
 //discography children
 var discographyH2 = TK.create("h2");
 TK.append(discography, discographyH2);
@@ -123,32 +132,52 @@ TK.append(form, formDivSumbit);
 //aboutH2 child
 var aboutAId = TK.create("a");
 TK.append(aboutH2, aboutAId);
-aboutAId.id = "about";
-aboutAId.innerHTML = "ABOUT";
+//aboutAId.id = "about";
+//aboutAId.innerHTML = "ABOUT";
+TK.attr(aboutAId, {
+	id: "about",
+	innerHTML: "ABOUT"
+})
 
 //discographyH2 child
 var discographyAId = TK.create("a");
 TK.append(discographyH2, discographyAId);
-discographyAId.id = "disco";
-discographyAId.innerHTML = "DISCOGRAPHY";
+TK.attr(discographyAId, {
+	id: "disco",
+	innerHTML: "DISCOGRAPHY"
+});
+//discographyAId.id = "disco";
+//discographyAId.innerHTML = "DISCOGRAPHY";
 
 //videoH2 child
 var videoAId = TK.create("a");
 TK.append(videoH2, videoAId);
-videoAId.id = "video";
-videoAId.innerHTML = "VIDEO";
+TK.attr(videoAId, {
+	id: "video",
+	innerHTML: "VIDEO"
+})
+//videoAId.id = "video";
+//videoAId.innerHTML = "VIDEO";
 
 //galleryh2 child
 var galleryAId = TK.create("a");
 TK.append(galleryH2, galleryAId);
-galleryAId.id = "gallery";
-galleryAId.innerHTML = "GALLERY";
+TK.attr(galleryAId, {
+	id: "gallery",
+	innerHTML: "GALLERY"
+})
+//galleryAId.id = "gallery";
+//galleryAId.innerHTML = "GALLERY";
 
 //formH2 child
 var formAId = TK.create("a");
 TK.append(formH2, formAId);
-formAId.id = "contact";
-formAId.innerHTML = "CONTACT";
+TK.attr(formAId, {
+	id: "contact",
+	innerHTML: "CONTACT"
+})
+//formAId.id = "contact";
+//formAId.innerHTML = "CONTACT";
 
 //discographyList children
 var discographyStrings = ["[2004] Powrót Piora EP", "[2005] Domino EP", "[2006] Hiobowe Wieści MIXTAPE", "[2009] dopuszczający MIXTAPE", "[2010] Liceum Ogólnokształcące", "[2011] Maxisingle #1: Jak się czujesz? / Błędne koło", "[2013] Hip Hop Kemp 2013 Bootleg", "[2015] Tragiczny MIXTAPE"]
@@ -157,13 +186,19 @@ for (var i=0; i<discographyStrings.length; i++)
 {
 	var discoListItem = TK.create("li");
   TK.append(discographyList, discoListItem);
-	discoListItem.innerHTML = discographyStrings[i];
+  	TK.attr(discoListItem, {
+  		innerHTML: discographyStrings[i]
+  	});
+	//discoListItem.innerHTML = discographyStrings[i];
 }
 
 var lastLi = discographyList.lastChild;
 var mxtpRelDate = TK.create("strong");
 TK.append(lastLi, mxtpRelDate);
-mxtpRelDate.innerHTML = " WIOSNA/LATO 2015";
+TK.attr(mxtpRelDate, {
+	innerHTML: " WIOSNA/LATO 2015"
+});
+//mxtpRelDate.innerHTML = " WIOSNA/LATO 2015";
 
 //videoTable children
 var filmLinks = ["https://www.youtube.com/embed/dn36Hxs2GlE", "https://www.youtube.com/embed/cNX5tSJdt48", "https://www.youtube.com/embed/3GJ1naLsQ7E", "https://www.youtube.com/embed/Fjdmqr5KixA", "https://www.youtube.com/embed/ePciNhUfHNk", "https://www.youtube.com/embed/nyTltqYCXHY"]
@@ -180,10 +215,16 @@ for (var i=1; i<4; i++)
 			//LEVEL 7
 			var film = TK.create("iframe");
       TK.append(col, film);
-			film.setAttribute("width", 280);
+      TK.attr(film, {
+      	width: 280,
+      	height: 157,
+      	frameborder: 0,
+      	src: filmLinks[k]
+      });
+		/*	film.setAttribute("width", 280);
 			film.setAttribute("height", 157);
 			film.setAttribute("frameborder", 0);
-			film.setAttribute("src", filmLinks[k]);
+			film.setAttribute("src", filmLinks[k]);*/
 			k=k+1;
 		}
 	}
@@ -204,12 +245,19 @@ for (var i=1; i<3; i++)
 		//LEVEL 7
 		var colA = TK.create("a");
     TK.append(col, colA);
-		colA.setAttribute("href", "gfx/" + imgNo + ".jpg")
+		TK.attr(colA, {
+			href: "../gfx/" + imgNo +".jpg"
+		});
+		//colA.setAttribute("href", "gfx/" + imgNo + ".jpg")
 		//LEVEL 8
 		var colImg = TK.create("img");
     TK.append(colA, colImg);
-		colImg.setAttribute("src", "gfx/" + imgNo + ".jpg");
-		colImg.setAttribute("alt", imgAlts[imgAltNo]);
+    TK.attr(colImg, {
+    	src: "../gfx/" + imgNo + ".jpg",
+    	alt: imgAlts[imgAltNo]
+    });
+		//colImg.setAttribute("src", "gfx/" + imgNo + ".jpg");
+		//colImg.setAttribute("alt", imgAlts[imgAltNo]);
 		imgAltNo = imgAltNo + 1;
 		imgNo = imgNo + 1;
 	}
@@ -218,42 +266,77 @@ for (var i=1; i<3; i++)
 
 var formNameLabel = TK.create("label");
 TK.append(formDivNameLabel, formNameLabel);
-formNameLabel.setAttribute("for", "name");
-formNameLabel.innerHTML = "YOUR PUSSY ASS NAME"
+TK.attr(formNameLabel, {
+	for: "name",
+	innerHTML: "YOUR PUSSY ASS NAME"
+});
+//formNameLabel.setAttribute("for", "name");
+//formNameLabel.innerHTML = "YOUR PUSSY ASS NAME"
 
 var formNameInput = TK.create("input");
 TK.append(formDivNameInput, formNameInput);
-formNameInput.setAttribute("type", "text");
-formNameInput.id = "name";
-formNameInput.setAttribute("name", "name");
+TK.attr(formNameInput, {
+	type: "text",
+	id: "name",
+	name: "name"
+});
+//formNameInput.setAttribute("type", "text");
+//formNameInput.id = "name";
+//formNameInput.setAttribute("name", "name");
 
 var formMailLabel = TK.create("label");
 TK.append(formDivMailLabel, formMailLabel);
-formMailLabel.setAttribute("for", "user-email");
-formMailLabel.innerHTML = "YOUR BITCHASS E-MALE A DRESS"
+TK.attr(formMailLabel, {
+	for: "user-email",
+	innerHTML: "YOUR BITCHASS E-MALE A DRESS"
+});
+//formMailLabel.setAttribute("for", "user-email");
+//formMailLabel.innerHTML = "YOUR BITCHASS E-MALE A DRESS"
 
 var formMailInput = TK.create("input");
 TK.append(formDivMailInput, formMailInput);
-formMailInput.setAttribute("type", "email");
+TK.attr(formMailInput, {
+	type: "email",
+	id: "user-email",
+	name: "user-email",
+	placeholder: "elo@kurwa.hg",
+	required: true
+});
+/*formMailInput.setAttribute("type", "email");
 formMailInput.id = "user-email";
 formMailInput.setAttribute("name", "user-email");
 formMailInput.setAttribute("placeholder", "elo@kurwa.hg");
 formMailInput.required = true;
-
+*/
 var formContentLabel = TK.create("label");
 TK.append(formDivContentLabel, formContentLabel);
-formContentLabel.setAttribute("for", "content");
-formContentLabel.innerHTML = "YOUR WHINE:"
+TK.attr(formContentLabel, {
+	for: "content",
+	innerHTML: "YOUR WHINE"
+});
+//formContentLabel.setAttribute("for", "content");
+//formContentLabel.innerHTML = "YOUR WHINE:"
 
 var formContentInput = TK.create("textarea");
 TK.append(formDivContentInput, formContentInput);
-formContentInput.setAttribute("rows", 10);
-formContentInput.setAttribute("cols", 50);
-formContentInput.id = "content";
-formContentInput.setAttribute("name", "content");
-formContentInput.setAttribute("placeholder", "Tell me your gay thoughts you fag!");
+TK.attr(formContentInput, {
+	rows: 10,
+	cols: 50,
+	id: "content",
+	name: "content",
+	placeholder: "Tell me your gay thoughts you fag!"
+});
+//formContentInput.setAttribute("rows", 10);
+//formContentInput.setAttribute("cols", 50);
+//formContentInput.id = "content";
+//formContentInput.setAttribute("name", "content");
+//formContentInput.setAttribute("placeholder", "Tell me your gay thoughts you fag!");
 
 var formSubmit = TK.create("input");
 TK.append(formDivSumbit, formSubmit);
-formSubmit.setAttribute("type", "submit");
-formSubmit.setAttribute("value", "SEND THAT SHIT!")
+TK.attr(formSubmit, {
+	type: "submit",
+	value: "SEND THAT SHIT!"
+});
+//formSubmit.setAttribute("type", "submit");
+//formSubmit.setAttribute("value", "SEND THAT SHIT!")
