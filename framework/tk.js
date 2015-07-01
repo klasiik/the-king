@@ -1,10 +1,16 @@
 var TK = function(){
   return {
     create: function(element){
-      return ...
-    },
+	  var elo = document.createElement(element);
+      return elo    
+  	},
     append: function(parent, element) {
-      ...
+    	parent.appendChild(element);
+      
+    },
+    tag: function(element){
+    	var chuj = document.getElementsByTagName(element);
+    	return chuj
     }
   };
 }();

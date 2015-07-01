@@ -25,6 +25,7 @@ h1.innerHTML = "KLASIIK";
 
 var navH2 = TK.create("h2");
 TK.append(nav, navH2);
+//append(do czego, co)
 navH2.innerHTML = "MENU";
 
 var navList = TK.create("ul");
